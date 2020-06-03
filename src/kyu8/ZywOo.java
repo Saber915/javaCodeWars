@@ -8,12 +8,14 @@ import java.util.Arrays;
  */
 public class ZywOo {
     public static int[] take(int[] arr, int n) {
-        int[] ints = new int[n];
-        for (int i = 0; i < n; i++) {
-            ints[i] = arr[i];
+        if (n <= 0){
+            return Arrays.copyOfRange(arr,0,0);
+        }else if (n > arr.length){
+            return arr;
+        }else{
+            return Arrays.copyOfRange(arr, 0, n);
         }
-        int[] ints1 = Arrays.copyOfRange(arr, 0, n);
-        return ints1;
+
     }
 
     public static void main(String[] args) {
